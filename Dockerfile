@@ -1,8 +1,9 @@
 FROM scratch
 COPY certs/ca-certificates.crt /etc/ssl/certs/
 COPY traefik /
+COPY start-traefik /
 EXPOSE 80
-ENTRYPOINT ["/traefik"]
+ENTRYPOINT ["/start-traefik"]
 
 # Metadata
 LABEL org.label-schema.vendor="Containous" \
