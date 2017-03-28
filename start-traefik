@@ -2,7 +2,7 @@
 
 for t in $(seq 1 1 ${RETRY_START_COUNT:=100}); do
     echo "tries: $t"
-    result="$(curl -s -m 5 -X GET http://localhost:8500/v1/kv/traefik)"
+    result="$(curl -s -m 5 -X GET http://cbreak_consul_1:8500/v1/kv/traefik)"
     exitcode=$?
     if [ $exitcode -eq 0 ];then
         echo "Consul up and running"
