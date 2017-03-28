@@ -1,5 +1,5 @@
-FROM golang:1.7
-RUN apt-get install -y curl
+FROM centos:7
+RUN yum install -y curl
 COPY certs/ca-certificates.crt /etc/ssl/certs/
 COPY traefik /
 COPY start-traefik /
