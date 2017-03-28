@@ -1,5 +1,5 @@
-FROM alpine:3.2
-RUN apk --update add curl bash ca-certificates 
+FROM golang:1.7
+RUN apt-get install -y curl
 COPY certs/ca-certificates.crt /etc/ssl/certs/
 COPY traefik /
 COPY start-traefik /
